@@ -1,12 +1,13 @@
+drop table if exists features;
+drop table if exists labels;
 drop table if exists xtx;
 drop table if exists xty;
 drop table if exists xtx_inverse;
 
+
 # 1) Create tables; fill with values
 
-drop table if exists features;
 create table features (row_num int, col_num int, feature_value int);
-
 insert into features values
     (1, 1, 1),
     (2, 1, 1),
@@ -24,9 +25,7 @@ insert into features values
     (4, 3, 16),
     (5, 3, 25);
     
-drop table if exists labels;
 create table labels (row_num int, col_num int, label_value int);
-
 insert into labels values
     (1, 1, 6),
     (2, 1, 11),
